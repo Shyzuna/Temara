@@ -1,4 +1,129 @@
 
+<?php
+
+$erreurCivilite = "";
+$erreurNom = "";
+$erreurPrenom = "";
+$erreurTelephone = "";
+$erreurMail = "";
+$erreurTypeBien = "";
+$erreurEtat = "";
+$erreurBudget = "";
+$erreurSurface = "";
+$erreurNbPieces = "";
+
+if (isset($_SESSION['compte']))
+{
+	$compte = unserialize($_SESSION['compte']);
+	$civilite = $compte->civilite;
+	$nom = $compte->nom;
+	$prenom = $compte->prenom;
+	$telephone = $compte->telephone;
+	$mail = $compte->mail;
+}
+else
+{
+	$civilite = 0;
+	$nom = "";
+	$prenom = "";
+	$telephone = "";
+	$mail = "";
+}
+
+$typeBien = "";
+$etat = null;
+$budgetMin = null;
+$budgetMax = null;
+$surfaceMin = null;
+$surfaceMax = null;
+$nbPiecesMin = null;
+$nbPiecesMax = null;
+$remarques = "";
+
+$formEnvoye = false;
+
+if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['telephone']) && isset($_POST['mail']) && 
+	isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['budgetMin']) && isset($_POST['budgetMax']) && isset($_POST['surfaceMin']) && isset($_POST['surfaceMax']) &&
+	isset($_POST['nbPiecesMin']) && isset($_POST['nbPiecesMax']) && isset($_POST['remarques']))
+{
+	if ($_POST['civilite'] >= 1 && $_POST['civilite'] <= 3)
+		$civilite = $_POST['civilite'];
+	if ($_POST['nom'] != '')
+		$nom = htmlentities($_POST['nom']);
+	if ($_POST['prenom'] != '')
+		$prenom = htmlentities($_POST['prenom']);
+	if ($_POST['telephone'] != '')
+		$telephone = htmlentities($_POST['telephone']);
+	if ($_POST['mail'] != '')
+		$mail = htmlentities($_POST['mail']);
+	if ($_POST['typeBien'] == 'Maison' || $_POST['typeBien'] == 'Appartement' || $_POST['typeBien'] == 'Terrain' || $_POST['typeBien'] == 'Garage' || $_POST['typeBien'] == 'Local commercial' || $_POST['typeBien'] == 'Autre')
+		$typeBien = $_POST['typeBien'];
+	if ($_POST['etat'] == 1 || $_POST['etat'] == 2)
+		$etat = $_POST['etat'];
+	if ($_POST['budgetMin'] != '')
+		$budgetMin = htmlentities($_POST['budgetMin']);
+	if ($_POST['budgetMax'] != '')
+		$budgetMax = htmlentities($_POST['budgetMax']);
+	if ($_POST['surfaceMin'] != '')
+		$surfaceMin = htmlentities($_POST['surfaceMin']);
+	if ($_POST['surfaceMax'] != '')
+		$surfaceMax = htmlentities($_POST['surfaceMax']);
+	if ($_POST['nbPiecesMin'] != '')
+		$nbPiecesMin = htmlentities($_POST['nbPiecesMin']);
+	if ($_POST['nbPiecesMax'] != '')
+		$nbPiecesMax = htmlentities($_POST['nbPiecesMax']);
+	if ($_POST['remarques'] != '')
+		$remarques = htmlentities($_POST['remarques']);
+	
+	// Si les champs sont bien remplis
+	if (($civilite >= 1 && $civilite <= 3) && $nom != '' && $prenom != '' && $telephone != '' && (preg_match("^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}^",$telephone)) 
+		&& $_POST['mail'] != '' && filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL) && $typeBien != "" && $etat != null
+		&& ($budgetMin == null || is_numeric($budgetMin)) && ($budgetMax == null || is_numeric($budgetMax)) && ($budgetMin == null || $budgetMax == null || $budgetMin <= $budgetMax)
+		&& ($surfaceMin == null || is_numeric($surfaceMin)) && ($surfaceMax == null || is_numeric($surfaceMax)) && ($surfaceMin == null || $surfaceMax == null || $surfaceMin <= $surfaceMax)
+		&& ($nbPiecesMin == null || is_numeric($nbPiecesMin)) && ($nbPiecesMax == null || is_numeric($nbPiecesMax)) && ($nbPiecesMin == null || $nbPiecesMax == null || $nbPiecesMin <= $nbPiecesMax))
+	{
+		ContactTable::addContact($civilite,$nom,$prenom,$telephone,$mail,$typeBien,$etat,$budgetMin,$budgetMax,$surfaceMin,$surfaceMax,$nbPiecesMin,$nbPiecesMax,nl2br($remarques));
+		$formEnvoye = true;
+	}
+	else
+	{
+		// Messages d'erreur
+		if ($_POST['civilite'] < 1 || $_POST['civilite'] > 3)
+			$erreurCivilite = '<br /><span class="erreur_form">Veuillez choisir une civilité</span>';
+		if ($_POST['nom'] == '')
+			$erreurNom = '<br /><span class="erreur_form">Veuillez saisir votre nom</span>';
+		if ($_POST['prenom'] == '')
+			$erreurPrenom = '<br /><span class="erreur_form">Veuillez saisir votre prénom</span>';
+		if ($_POST['telephone'] == '')
+			$erreurTelephone = '<br /><span class="erreur_form">Veuillez saisir votre numéro de téléphone</span>';
+		else if (!(preg_match("^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}^",$telephone)))
+			$erreurTelephone = '<br /><span class="erreur_form">Le numéro saisi est invalide</span>';
+		if ($_POST['mail'] == '')
+			$erreurMail = '<br /><span class="erreur_form">Veuillez saisir votre adresse mail</span>';
+		else if (!(filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)))
+			$erreurMail = '<br /><span class="erreur_form">L\'adresse mail saisie est invalide</span>';
+			
+		if (($budgetMin != null && !(is_numeric($budgetMin))) || ($budgetMax != null && !(is_numeric($budgetMax))))
+			$erreurBudget = '<br /><span class="erreur_form">Veuillez entrer un nombre</span>';
+		else if ($budgetMin != null && $budgetMax != null && ($budgetMin > $budgetMax))
+			$erreurBudget = '<br /><span class="erreur_form">Le budget minimum doit être inférieur au budget maximum</span>';
+			
+		if (($surfaceMin != null && !(is_numeric($surfaceMin))) || ($surfaceMax != null && !(is_numeric($surfaceMax))))
+			$erreurSurface = '<br /><span class="erreur_form">Veuillez entrer un nombre</span>';
+		else if ($surfaceMin != null && $surfaceMax != null && ($surfaceMin > $surfaceMax))
+			$erreurSurface = '<br /><span class="erreur_form">La surface minimum doit être inférieur à la surface maximum</span>';
+			
+		if (($nbPiecesMin != null && !(is_numeric($nbPiecesMin))) || ($nbPiecesMax != null && !(is_numeric($nbPiecesMax))))
+			$erreurNbPieces = '<br /><span class="erreur_form">Veuillez entrer un nombre</span>';
+		else if ($nbPiecesMin != null && $nbPiecesMax != null && ($nbPiecesMin > $nbPiecesMax))
+			$erreurNbPieces = '<br /><span class="erreur_form">Le nombre de pièces minimum doit être inférieur au nombre de pièces maximum</span>';
+	}
+}
+
+?>
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
