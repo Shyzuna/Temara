@@ -1,0 +1,43 @@
+.btn.disabled, .btn[disabled] 
+{
+	filter: alpha(opacity=65);
+}
+
+/* Le menu */
+
+#nav ul
+{
+	padding-left: 0;
+	width: 100%;
+}
+
+#nav li
+{
+	border: solid 0.5px orange;
+}
+
+/* L'ensemble constitué du "coeur" de la page (tout sauf le header, le nav et le footer) */
+
+#ensemble
+{
+	border : solid 1px lightgrey;
+}
+
+#ensemble h2
+{
+	color: rgb(255, 165, 0);
+}
+
+/* Les cadres */
+
+.cadre
+{
+	border : solid 3px lightgrey;
+}
+
+/* La description du bien sélectionné */
+
+.section_description
+{
+	color: #A0A0A0;
+}

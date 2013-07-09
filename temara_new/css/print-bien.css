@@ -1,0 +1,34 @@
+body
+{
+	background-color: white;
+}
+
+#header, .bouton_menu, #nav, noscript, h2, #tabs, .loader, .cadre .btn, .ad-image-wrapper, .photos, #map_canvas, #ensemble > .cadre, .connexion_admins,
+.connexion, .deconnexion, .etoile, .cadre a.btn, .selection, #nav_compte, .description img, .description form
+{
+	display: none;
+}
+
+#ensemble
+{
+	border: none;
+}
+
+.description
+{
+	border: solid 1px lightgrey;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	float: left;
+}
+
+#photos_print
+{
+	display: block;
+}
+
+#photos_print img
+{
+	margin: 2px;
+}

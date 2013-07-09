@@ -1,0 +1,500 @@
+body
+{
+	margin : auto;
+	max-width: 1000px;
+	height : 100%;
+	background-color : rgb(116,126,114);
+}
+
+#corps
+{
+	background-color : white;
+	padding : 2%;
+	padding-bottom: 0.9em;
+	margin-bottom : 5%;
+	margin-top: 0.5%;
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	behavior: url('http://localhost:8080/temara/library/PIE/PIE.htc');
+	width: 96%;
+	position: relative;
+}
+
+.rouge
+{
+	color: red;
+	text-align : center;
+	font-weight : bold;
+}
+
+.explication
+{
+	font-family: Georgia, sans-serif;
+	font-style: italic;
+}
+
+#photos_print
+{
+	display: none;
+}
+
+.loader
+{
+	display: none;
+	width: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+/* Le header */
+
+#header
+{
+	background-color : rgb(116,126,114);
+	color : goldenrod;
+	height : 15%;
+	font-size : 60px;
+	text-align : center;
+	margin-bottom : 5px;
+}
+
+/* le menu */
+
+#nav ul
+{
+    padding : 0;
+    margin : 0;
+	display: table;
+	border-spacing: 3px 0;
+}
+
+#nav li
+{
+	list-style : none;
+	display : table-cell;
+	text-align: center;
+	vertical-align: middle;
+	
+	background: -moz-linear-gradient(top, rgba(251,157,35,1) 1%, rgba(255,197,120,1) 4%, rgba(251,157,35,1) 69%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(251,157,35,1)), color-stop(4%,rgba(255,197,120,1)), color-stop(69%,rgba(251,157,35,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(251,157,35,1) 1%,rgba(255,197,120,1) 4%,rgba(251,157,35,1) 69%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(251,157,35,1) 1%,rgba(255,197,120,1) 4%,rgba(251,157,35,1) 69%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(251,157,35,1) 1%,rgba(255,197,120,1) 4%,rgba(251,157,35,1) 69%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(251,157,35,1) 1%,rgba(255,197,120,1) 4%,rgba(251,157,35,1) 69%); /* W3C */
+}
+
+#nav li:nth-child(1)
+{
+   /* width: 4%;*/
+}
+
+#nav li:nth-child(2)
+{
+    width: 10%
+}
+
+#nav li:nth-child(3)
+{
+    width: 18%;
+}
+
+#nav li:nth-child(4)
+{
+    width: 25%;
+}
+
+#nav li:nth-child(5)
+{
+    width: 18%;
+}
+
+#nav li:nth-child(6)
+{
+    width: 9%
+}
+
+#nav li:nth-child(7)
+{
+    width: 13%;
+}
+
+#nav a
+{
+    display: block;
+    padding : 3px 6px 3px 6px;
+	text-decoration : none;
+	color : black;
+	font-weight : bold;
+}
+
+.btn.bouton_menu
+{
+	display: none;
+}
+
+/* L'ensemble constitué du "coeur" de la page (tout sauf le header, le nav et le footer) */
+
+#ensemble
+{
+	border : solid 1px rgba(0,0,0,0.3);
+	margin-top : 5px;
+	padding : 10px;
+	position: relative;
+}
+
+#ensemble h2
+{
+	color: rgba(255, 165, 0, 0.91);
+	font-family: "Arial Black";
+	margin-top: 5%;
+}
+
+/* le défilement des photos des biens */
+
+.ad-gallery
+{
+	width : 90%;
+	margin : auto;
+}
+
+.ad-gallery img
+{
+	width : 180px;
+	height : 90px;
+	cursor : pointer;
+}
+
+.ad-thumb-list a
+{
+	position : relative;
+}
+
+/* Le bloc constitué des photos et de la description du bien sélectionné */
+
+#selection_bien
+{
+	margin-top : 10px;
+}
+
+#selection_bien > div
+{
+	display: none;
+}
+
+/* Les cadres avec une ombre derrière leur bordure */
+
+.cadre
+{
+	border : solid 3px rgba(0,0,0,0.2);
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	
+	-moz-box-shadow: 5px 5px 10px 0px #656565;
+	-webkit-box-shadow: 5px 5px 10px 0px #656565;
+	box-shadow: 5px 5px 10px 0px #656565;
+	
+	/* IE <= 8 */
+	background-color: white; /* Sinon box-shadow ne fonctionne pas sous IE */
+	behavior: url("http://localhost:8080/temara/library/PIE/PIE.htc");
+	
+	padding : 10px;
+	position: relative;
+}
+
+/* Les photos du bien sélectionné */
+
+.photos
+{
+    width : 44%;
+    height : 65%;
+    display : inline-block;
+	position: relative;
+}
+
+.photos .ad-gallery
+{
+	width : 80%;
+	height : 70%;
+}
+
+.photos .ad-image-wrapper img
+{
+    height : 100%;
+	width : 100%;
+}
+
+.photos .ad-nav
+{
+	height : 17%;
+	margin-bottom : 5px;
+}
+
+.photos .ad-thumb-list img
+{
+    width : 90px;
+}
+
+.photos .ad-image-wrapper .ad-loader
+{
+    width : 28px;
+    height : 28px;
+    border : none;
+}
+
+.photos .ad-gallery .ad-back
+{
+	left: -13%;
+}
+
+.photos .ad-gallery .ad-forward
+{
+	right: -13%;
+}
+
+#ensemble .ui-widget-header 
+{
+	background-image : none;
+	
+	-o-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	
+	background: -webkit-linear-gradient(bottom,rgb(255,255,255),rgb(116,126,114));
+	background: -moz-linear-gradient(bottom,rgb(255,255,255),rgb(116,126,114));
+	background: -o-linear-gradient(bottom,rgb(255,255,255),rgb(116,126,114));
+	background: -ms-linear-gradient(bottom,rgb(255,255,255),rgb(116,126,114));
+	background: linear-gradient(to top,rgb(255,255,255),rgb(116,126,114));
+}
+
+/* La description du bien sélectionné */
+.description
+{
+	width: 45.5%;
+	height: 65%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 1% 1% 1%;
+	margin-right : 5%;
+}
+
+.section_description
+{
+    font-weight : bold;
+    opacity : 0.45;
+}
+
+.description p
+{
+	text-align : justify;
+	font-size: 0.9em;
+	font-family: Helvetica, sans-serif;
+}
+
+.description h4
+{
+	font-family: Helvetica, sans-serif;
+}
+
+.description h4, .description .details
+{
+	display: inline-block;
+	width: 55%;
+}
+
+.description_right
+{
+	width: 45%;
+	display: inline-block;
+	vertical-align:top;
+}
+
+.description .prix
+{
+	color: goldenrod;
+	font-size: 1.8em;
+	font-weight: bold;
+	text-align: right;
+}
+
+.description .agence
+{
+	text-align: center;
+}
+
+.description .btn-print
+{
+	margin-right: 0;
+}
+
+.etoile
+{
+	margin-top: 5px;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.form_icon_map
+{
+	display: inline;
+}
+
+.description img, .form_icon_map
+{
+	margin-right: 10px;
+}
+
+.btn-print
+{
+	cursor: pointer;
+}
+
+.description a img
+{
+	border: none;
+}
+
+.icones_description
+{
+	text-align: center;
+}
+
+
+/* AD Gallery */
+
+.ad-gallery .ad-image-wrapper
+{
+	width: 120%;
+	margin-left: -10%;
+}
+
+.ad-gallery .ad-back
+{
+	background: url("../images/fleche-gauche.png") no-repeat;
+	left: -5.5%;
+	top: 25%;
+	width: 32px;
+	height: 32px;
+}
+
+.ad-gallery .ad-forward
+{
+	background: url("../images/fleche-droite.png") no-repeat;
+	top: 25%;
+	right: -5.5%;
+	width: 32px;
+	height: 32px;
+}
+
+.ad-gallery .ad-image-wrapper .ad-image .ad-image-description, .control-group
+{
+	font-family: Helvetica, sans-serif;
+}
+
+/*
+* Formulaires
+*/
+
+.indication_form
+{
+	font-size: 0.7em;
+}
+
+.erreur_form
+{
+	font-size: 0.7em;
+	color: rgb(206, 37, 30);
+}
+
+.form-horizontal .controls 
+{
+	margin-left: 220px;
+}
+
+.form-horizontal .control-label 
+{
+	float: left;
+	width: 200px;
+}
+
+.confirm_form_envoye
+{
+	text-align: center;
+	color: rgb(11, 112, 11);
+	font-family: Helvetica;
+	display: block;
+	width: 100%;
+	margin-bottom: 3%;
+}
+
+/*
+* Bouton de connexion
+*/
+
+.connexion, .deconnexion
+{
+	position: absolute;
+	right: 1%;
+}
+
+.connexion
+{
+	background-image: -webkit-linear-gradient(top, rgb(62, 156, 62), rgb(41, 112, 41));
+	background-image: -moz-linear-gradient(top, rgb(62, 156, 62), rgb(41, 112, 41));
+	background-image: -o-linear-gradient(top, rgb(62, 156, 62), rgb(41, 112, 41));
+	background-image: -ms-linear-gradient(top, rgb(62, 156, 62), rgb(41, 112, 41));
+	background-image: linear-gradient(to bottom, rgb(62, 156, 62), rgb(41, 112, 41));
+}
+
+.connexion:hover, .connexion:focus
+{
+	background-color: rgb(21, 116, 21);
+}
+
+
+/*
+* Modal Bootstrap
+*/
+
+#modal h3
+{
+	margin: 10px 0;
+	font-size: 24.5px;
+}
+
+#modal h4 
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: Verdana;
+	color: rgb(71, 122, 94);
+}
+
+#modal p
+{
+	font-family: Helvetica;
+	font-size: 0.8em;
+}
+
+#modal p a
+{
+	color: blue;
+}
+
+#modal .control-group+.control-group a
+{
+	color: blue;
+	font-size: 0.7em;
+}
+
+#modal .modal-body .button_connect
+{
+	display: none;
+}
+
+#modal input
+{
+	width: 220px;
+}

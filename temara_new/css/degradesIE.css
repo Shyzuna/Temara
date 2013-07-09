@@ -1,0 +1,49 @@
+#nav a
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb9d23', endColorstr='#F8BE73');
+}
+
+#ensemble .ui-widget-header 
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#747E72', endColorstr='#ffffff');
+}
+
+.btn
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6');
+}
+
+.btn:hover, .btn:focus
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e6e6', endColorstr='#e6e6e6');
+}
+
+.btn-primary
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0088cc', endColorstr='#0044cc');
+}
+
+.btn-primary:hover, .btn-primary:focus
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0044cc', endColorstr='#0044cc');
+}
+
+.connexion
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E9C3E', endColorstr='#297029');
+}
+
+.connexion:hover, .connexion:focus
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#157415', endColorstr='#157415');
+}
+
+.deconnexion
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee5f5b', endColorstr='#bd362f');
+}
+
+.deconnexion:hover, .deconnexion:focus
+{
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd362f', endColorstr='#bd362f');
+}
