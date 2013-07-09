@@ -1,0 +1,366 @@
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 1023px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 1023px) 
+{
+	#corps
+	{
+		width: 90%;
+		margin: 5px auto;
+	}
+	
+	/* Le menu */
+	
+	#nav li
+	{
+		font-size: 0.9em;
+		vertical-align: middle;
+	}
+	#nav li:nth-child(1)
+	{
+		width: 1%;
+	}
+
+	#nav li:nth-child(2)
+	{
+		width: 9%;
+	}
+
+	#nav li:nth-child(3)
+	{
+		width: 15%;
+	}
+
+	#nav li:nth-child(4)
+	{
+		width: 22%;
+	}
+
+	#nav li:nth-child(5)
+	{
+		width: 15%;
+	}
+
+	#nav li:nth-child(6)
+	{
+		width: 1%;
+	}
+
+	#nav li:nth-child(7)
+	{
+		width: 13%;
+	}
+	
+	/* La description des biens */
+	
+	.description
+	{
+		width: 44%;
+	}
+	
+	.description
+	{
+		width: 44%;
+	}
+}
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 799px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 799px) 
+{
+	/* Le menu */
+	
+	.btn.bouton_menu
+	{
+		display: block;
+		width: auto;
+		height: 30px;
+		line-height: 30px;
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F7D2B5', endColorstr='#B87117');
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(247, 210, 181)), to(rgb(184, 113, 23)));
+		background-image: -webkit-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -moz-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -o-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -ms-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		color: rgba(128, 80, 80, 1);
+		font-weight: bold;
+		font-size: 1.2em;
+		position: relative;
+	}
+	
+	.btn.bouton_menu:hover, .btn.bouton_menu:focus
+	{
+		background-position: 0;
+		background-image: linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(247, 210, 181)), to(rgb(184, 113, 23)));
+		background-image: -webkit-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -moz-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -o-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+		background-image: -ms-linear-gradient(top, rgb(247,210,181), rgb(184,113,23));
+	}
+	
+	.btn.bouton_menu i
+	{
+		position: absolute;
+		right: 3%;
+	}
+	
+	#nav
+	{
+		display: none;
+	}
+	
+	#nav ul
+	{
+		display:block;
+		width: 100%;
+		padding-left: 0;
+	}
+	
+	#nav li
+	{
+		display: block;
+		height: 40px;
+		line-height: 40px;
+	}
+	
+	#nav li:nth-child(1), #nav li:nth-child(2),#nav li:nth-child(3),#nav li:nth-child(4),#nav li:nth-child(5),#nav li:nth-child(6),#nav li:nth-child(7)
+	{	
+		width: 100%;	
+	}
+	
+	#nav a
+	{
+		height: 100%;
+		padding: 0;
+	}
+	
+	/* La barre de défilement des biens */
+	
+	#tabs .ad-gallery .ad-nav .ad-thumbs
+	{
+		width: 97%;
+	}
+	
+	#tabs .ad-gallery .ad-nav .ad-thumbs 
+	{
+		width: 93%;
+		margin: auto;
+	}
+	
+	/* Photos du bien sélectionné */
+	
+	.photos
+	{
+		display: block;
+		width: auto;
+		margin-top: 10px;
+	}
+	
+	/* Le descriptif du bien sélectionné */
+	
+	.description
+	{
+		display: block;
+		width: auto;
+		margin: 0;
+	}
+	
+	/* Bouton de connexion/déconnexion */
+	
+	.connexion, .deconnexion
+	{
+		position: static;
+	}
+	
+	/* Modal de connexion */
+	.modal 
+	{
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		width: auto;
+		margin: 0;
+	}
+	
+	.modal.fade 
+	{
+		top: -100px;
+	}
+	
+	.modal.fade.in 
+	{
+		top: 20px;
+	}
+}
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 430px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 430px) 
+{
+	#header
+	{
+		font-size: 2.5em;
+	}
+	
+	/* La barre de défilement des biens */
+	
+	.ui-widget
+	{
+		font-size: 0.9em;
+	}
+	
+	.ui-tabs .ui-tabs-nav li
+	{
+		width: 46%;
+	}
+	
+	.ui-tabs .ui-tabs-nav li a
+	{
+		width: 100%;
+		text-align: center;
+		padding: 0.5em 0em;
+	}
+	
+	/* Le cadre en-dessous du menu */
+	
+	#ensemble
+	{
+		padding: 5px;
+	}
+	
+	#ensemble h2
+	{
+		margin: 5% 0% 4% 0%;
+	}
+	
+	/* Photos du bien sélectionné */
+	
+	.photos .ad-gallery .ad-image-wrapper .ad-image .ad-image-description
+	{
+		display: none;
+	}
+	
+	.photos
+	{
+		height: 350px;
+	}
+	
+	.photos .ad-gallery
+	{
+		height: 100%;
+	}
+	
+	.photos .ad-image-wrapper
+	{
+		height: 60%;
+	}
+	
+	/* La description du bien sélectionné */
+	
+	.description h4, .description .details
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.description .description_right
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.description .prix
+	{
+		font-size: 1.5em;
+		text-align: left;
+		margin: -5px 5px 0;
+	}
+	
+	/* AD Gallery */
+	
+	.ui-tabs .ui-tabs-panel
+	{
+		padding: 1em;
+	}
+	
+	.ad-gallery .ad-back
+	{
+		top: 33%;
+		left: -7%;
+	}
+	
+	.ad-gallery .ad-forward
+	{
+		top: 33%;
+	}
+	
+	.photos .ad-gallery .ad-back
+	{
+		left: -14.5%;
+		top: 50%;
+	}
+	
+	.photos .ad-gallery .ad-forward
+	{
+		right: -17%;
+		top: 50%;
+	}
+	
+	#tabs .ad-gallery .ad-nav .ad-thumbs
+	{
+		width: 80%;
+		margin: auto;
+	}
+	
+	#tabs .ad-gallery img
+	{
+		width: 80px;
+	}
+	
+	/* Modal Bootstrap */
+	
+	#modal .modal-header, #modal .modal-footer, #modal .modal-body h4, #modal .modal-body p
+	{
+		display: none;
+	}
+	
+	#modal .modal-body .button_connect
+	{
+		display: block;
+	}
+	
+	#modal input
+	{
+		width: 90%;
+	}
+}
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 470px de hauteur
+************************************************************************************************************************************************************/
+
+@media screen and (max-height: 470px)
+{
+	#modal .modal-header, #modal .modal-footer, #modal .modal-body h4, #modal .modal-body p
+	{
+		display: none;
+	}
+	
+	#modal .modal-body .button_connect
+	{
+		display: block;
+	}
+	
+	#modal input
+	{
+		width: 90%;
+	}
+}

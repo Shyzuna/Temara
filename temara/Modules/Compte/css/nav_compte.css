@@ -1,0 +1,46 @@
+.nav-pills>.active>a, .nav-pills>.active>a:hover, .nav-pills>.active>a:focus 
+{
+	background-color: rgb(41, 117, 34);
+}
+  
+#nav_compte a
+{
+	font-family: Tahoma;
+	text-decoration: none;
+}
+  
+.not_active a
+{
+    color: green;
+}
+
+#ensemble > .cadre h4
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: Verdana;
+	color: rgb(71, 122, 94);
+}
+
+@media screen and (max-width: 799px)
+{
+	a.btn
+	{
+		margin-top: 15px;
+		width: 50%;
+	}
+	
+	.boutons_form
+	{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 420px)
+{
+	.nav-tabs>li, .nav-pills>li
+	{
+		display: block;
+		width: 100%;
+	}
+}

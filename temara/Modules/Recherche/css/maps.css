@@ -1,0 +1,144 @@
+html
+{
+	height : 780px;
+}
+
+body
+{
+	height: 780px;
+}
+
+#header
+{
+	height: 70px;
+}
+
+#corps
+{
+	height : 710px;
+}
+
+#ensemble
+{
+	height : 580px;
+}
+
+/*
+* Map
+*/
+
+#map_canvas
+{
+	width : 69%;
+	height : 500px;
+	display: inline-block;
+	margin-left: 1%;
+	vertical-align: top;
+}
+
+.marker
+{
+	font-family: Helvetica, sans-serif;
+}
+
+.marker .prix
+{
+	color: goldenrod;
+	font-size: 1.3em;
+}
+
+
+/*
+* Formulaire
+*/
+
+#ensemble > .cadre
+{
+	width: 25%;
+	display: inline-block;
+}
+
+.suivant
+{
+	position: absolute;
+	right: 10px;
+}
+
+.cadre form
+{
+	margin-top: 8%;
+}
+
+.cadre .control-group .controls
+{
+	width: 90%;
+}
+
+.cadre .control-group .controls_number
+{
+	width: 100%;
+}
+
+.cadre .control-group input[type='text'], .cadre .control-group input[type='number']
+{
+	width: 100%;
+}
+
+.cadre .input-append
+{
+	width: 90%;
+}
+
+.cadre .checkbox.inline+.checkbox.inline
+{
+	margin: 0;
+}
+
+.cadre .form-horizontal .control-label
+{
+	float:none;
+	text-align: left;
+}
+
+.cadre .form-horizontal .controls 
+{
+	margin-left: 0;
+}
+
+.controls > .control-group
+{
+	width: 41%;
+	display: inline-block;
+	margin: auto;
+}
+
+.controls > .control-group:first-child
+{
+	margin-right: 15%;
+}
+
+.controls > .without-input-append
+{
+	width: 45%;
+}
+
+.controls > .without-input-append:first-child
+{
+	margin-right: 5%;
+}
+
+form button[type="submit"]
+{
+	width: 100%;
+}
+
+
+/*
+* Photos et description d'un bien
+*/
+
+.description, .photos
+{
+	margin-top: 10px;
+	height: auto;
+}

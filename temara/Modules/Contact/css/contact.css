@@ -1,0 +1,70 @@
+#map_amiens, #map_corbie
+{
+	width : 350px;
+	height : 350px;
+	margin-bottom: 15px;
+}
+
+#corps h4
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: Verdana;
+	color: rgb(71, 122, 94);
+}
+
+.champ_text
+{
+	width: 206px;
+}
+
+#agences
+{
+	text-align: center;
+}
+
+.coordonnees_agence
+{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	margin-bottom: 6%;
+}
+
+.coordonnees_agence:first-child
+{
+	margin-right: 15%;
+}
+
+
+
+@media screen and (max-width: 950px)
+{
+	.coordonnees_agence
+	{
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+}
+
+
+@media screen and (max-width: 799px)
+{
+	.champ_text
+	{
+		width: 80%;
+	}
+}
+
+
+@media screen and (max-width: 420px)
+{
+	#map_amiens, #map_corbie
+	{
+		width : 90%;
+		height : 200px;
+		font-size: 0.8em;
+	}
+}

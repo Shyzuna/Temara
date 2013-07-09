@@ -1,0 +1,62 @@
+.selection
+{
+	background-color: rgb(244, 246, 253);
+	padding: 5px;
+	margin: 10px;
+	width: 45%;
+	display: inline-block;
+	cursor: pointer;
+	color: rgb(21, 43, 112);
+	font-family: Helvetica;
+	font-weight: bold;
+	position: relative;
+}
+
+.selection img
+{
+	height: 100px;
+	width: 100px;
+	margin-right: 10px;
+}
+
+.description_selection
+{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.close
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 799px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 799px)
+{
+	.selection
+	{
+		display: block;
+		width: auto;
+	}
+}
+
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 430px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 430px) 
+{
+	.description_selection
+	{
+		font-size: 0.9em;
+		display: block;
+		width: auto;
+	}
+}

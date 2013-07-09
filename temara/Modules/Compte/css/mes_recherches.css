@@ -1,0 +1,57 @@
+a.btn
+{
+	text-decoration: none;
+	font-family: Helvetica;
+	margin-top: 5%;
+}
+
+.explication
+{
+	margin-bottom: 0;
+}
+
+/* Les fiches de recherches */
+
+.fiche
+{
+	font-size: 0.9em;
+	font-family: Helvetica;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5%;
+	margin-top: 5%;
+}
+
+.fiche h5
+{
+	font-family: Verdana;
+	font-size: 1.1em;
+	color: rgb(18, 162, 18);
+	margin-bottom: 3%;
+	margin-top: 0;
+}
+
+.fiche form input[type="image"]
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.delete-fiche
+{
+	cursor: pointer;
+}
+
+a img
+{
+	border: none;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 799px)
+{
+	a.btn
+	{
+		width: 113px;
+	}
+}

@@ -1,0 +1,31 @@
+.cadre .controls .controls
+{
+	margin-left: 0;
+}
+
+.cadre .controls > .control-group
+{
+	width: 30%;
+	display: inline-block;
+	margin: auto;
+}
+
+.cadre .controls > .control-group:first-child
+{
+	margin-right: 20%;
+}
+
+.cadre .input-append
+{
+	width: 100%;
+}
+
+input
+{
+	width: 100%;
+}
+
+.cadre .not-input-append
+{
+	width: 237px;
+}
