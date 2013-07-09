@@ -1,3 +1,3 @@
 <div id="header">
-	TEMARA
+	<img src="banniere_temara.png" class="logo_titre"/>
 </div>

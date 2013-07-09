@@ -122,18 +122,18 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 
 ?>
 
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
   <title>TEMARA</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/index.css">
   <link href="css/media-queries.css" rel="stylesheet" type="text/css">
   <link href="css/form-media-queries.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/contact.css">
+  <link rel="stylesheet" type="text/css" href="css/contact.css">
   
   <link href="css/print-bien.css" rel="stylesheet" media="print">
 </head>
@@ -150,9 +150,9 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 			//require_once('lien_connexion.php');
 			?>
 			
-			<h2>Nous contacter</h2>
+			<center><h2>Site Bientôt Disponible</h2></center>
 			
-			<div class="cadre">
+			<div>
 				
 				<div id="agences">
 					<div class="coordonnees_agence">
@@ -184,6 +184,12 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 					Nous vous proposons de vous aider dans votre démarche.
 					Pour cela, remplissez et retournez-nous le formulaire ci-après.
 				</p>
+				
+				<hr/>
+				
+				<center>Transaction sur immeubles & fonds de commerce - Carte professionnelle n°117 délivrée par la Préfecture de la Somme</center>
+				
+				<h2>Nous contacter</h2>
 				
 				<?php if ($formEnvoye) echo '<p class="confirm_form_envoye">Votre demande a été envoyée avec succès</p>'; ?>
 					

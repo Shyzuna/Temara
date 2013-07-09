@@ -51,12 +51,15 @@ body
 
 #header
 {
-	background-color : rgb(116,126,114);
-	color : goldenrod;
-	height : 15%;
-	font-size : 60px;
-	text-align : center;
+	background-image:url("fond_ban.png");
+	background-repeat:repeat-x;
 	margin-bottom : 5px;
+	padding-bottom: 5px;
+}
+
+.logo_titre
+{
+
 }
 
 /* le menu */
