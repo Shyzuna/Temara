@@ -118,7 +118,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 					d'une surface comprise entre ".$surfaceMin."m² et ".$surfaceMax."m² avec ".$nbPiecesMin." à ".$nbPiecesMax." pièces.
 					".nl2br($remarques)."
 					Ces coordonnées : N°Tél : ".$telephone." et son Courriel ".$mail."";
-					
+			
 		$desti = "isabelle.tempez@temara.fr";
 		$sujet = "Contact ".$civilite.$nom;
 		mail($desti,$sujet,nl2br($message));
