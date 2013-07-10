@@ -16,23 +16,12 @@ $erreurBudget = "";
 $erreurSurface = "";
 $erreurNbPieces = "";
 
-if (isset($_SESSION['compte']))
-{
-	$compte = unserialize($_SESSION['compte']);
-	$civilite = $compte->civilite;
-	$nom = $compte->nom;
-	$prenom = $compte->prenom;
-	$telephone = $compte->telephone;
-	$mail = $compte->mail;
-}
-else
-{
-	$civilite = 0;
-	$nom = "";
-	$prenom = "";
-	$telephone = "";
-	$mail = "";
-}
+
+$civilite = 0;
+$nom = "";
+$prenom = "";
+$telephone = "";
+$mail = "";
 
 $typeBien = "";
 $etat = null;

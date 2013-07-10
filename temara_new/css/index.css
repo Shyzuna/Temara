@@ -19,7 +19,7 @@
 	behavior: url('http://localhost:8080/temara/library/PIE/PIE.htc');
 	width: 96%;
 	position: relative;
-	min-width: 400px;
+	
 }
 
 .rouge
@@ -485,4 +485,8 @@
 #modal input
 {
 	width: 220px;
+}
+img {
+	max-width: 100%;
+	height : auto;
 }
