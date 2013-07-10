@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,7 +27,7 @@
 			//require_once('lien_connexion.php');
 			?>
 			
-			<span style="float:right;"><a href="contact.php">Nous Contacter</a></span>
+			<button class="btn btn-success connexion"  onclick="location.href='contact.php'">Nous contacter</button>
 			
 			<center><h2>Site Bientôt Disponible</h2></center>
 			
@@ -75,7 +73,6 @@
 					Siège social : 73 rue Jules Barni - 80000 AMIENS - FRANCE <br />
 					SARL au capital de 7 622,45 € - 352 420 640 RCS AMIENS
 				</center>
-				
 				
 
 	<!-- jQuery -->
