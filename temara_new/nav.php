@@ -2,8 +2,8 @@
 <div id="nav">
 	<ul>
 		<li><a href="./index.php">Nouveautés</a></li>
-		<li><a href="./Modules/Recherche/recherche.php">Nos biens</a></li>
-		<li><a href="./Modules/Recherche/recherche.php?investisseur=true">Spécial investisseurs</a></li>
+		<li><a href="./recherche.php">Nos biens</a></li>
+		<li><a href="./recherche.php?investisseur=true">Spécial investisseurs</a></li>
 		<li><a href="./Modules/Estimation/estimation.php">Estimation et mise en vente</a></li>
 		<li><a href="./Modules/Financement/financement.php">Financement</a></li>
 		<li><a href="./find_us.php">Nous trouvez</a></li>
