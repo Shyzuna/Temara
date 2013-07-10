@@ -233,7 +233,8 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 							<?php echo $erreurEtat;?>
 						</div>
 					</div>
-
+					
+					
 					<div class="control-group">
 						<div class="control-label section_description">Budget</div>
 						<div class="controls">
