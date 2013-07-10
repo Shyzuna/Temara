@@ -82,9 +82,9 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		&& ($surfaceMin == null || is_numeric($surfaceMin)) && ($surfaceMax == null || is_numeric($surfaceMax)) && ($surfaceMin == null || $surfaceMax == null || $surfaceMin <= $surfaceMax)
 		&& ($nbPiecesMin == null || is_numeric($nbPiecesMin)) && ($nbPiecesMax == null || is_numeric($nbPiecesMax)) && ($nbPiecesMin == null || $nbPiecesMax == null || $nbPiecesMin <= $nbPiecesMax))
 	{
-		$message;
-		$desti;
-		$sujet;
+		$message ;
+		$desti = "isabelle.tempez@temara.fr";
+		$sujet = "Contact ".$civilite.$nom;
 		mail($desti,$sujet,$message);
 		//ContactTable::addContact($civilite,$nom,$prenom,$telephone,$mail,$typeBien,$etat,$budgetMin,$budgetMax,$surfaceMin,$surfaceMax,$nbPiecesMin,$nbPiecesMax,nl2br($remarques));
 		$formEnvoye = true;
@@ -133,13 +133,13 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
   <title>TEMARA</title>
-   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/index.css">
   <link href="css/media-queries.css" rel="stylesheet" type="text/css">
+  <link href="css/recherche.css" rel="stylesheet" type="text/css">
   <link href="css/form-media-queries.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="css/contact.css">
-  
-  <link href="css/print-bien.css" rel="stylesheet" media="print">
 </head>
 <body onload="initMaps()">
 
