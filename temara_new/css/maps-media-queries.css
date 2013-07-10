@@ -1,0 +1,104 @@
+/*************************************************************************************************************************************************
+* Résolutions inférieures ou égales à 799px de largeur
+**************************************************************************************************************************************************/
+@media screen and (max-width: 799px)
+{
+	body
+	{
+		height: 1020px;
+	}
+	
+	#corps
+	{
+		height: 980px;
+	}
+	
+	#ensemble
+	{
+		height: 590px;
+	}
+	
+	#ensemble > .cadre
+	{
+		display: block;
+		width: 95%;
+		padding: 1%;
+		margin: auto;
+		margin-bottom: 3%;
+		position: relative;
+	}
+	
+	.cadre form 
+	{
+		margin-top: 2%;
+	}
+	
+	.sous_form .control-group:first-child
+	{
+		display: inline-block;
+		width: 45%;
+		margin-right: 5%;
+	}
+	
+	.sous_form .control-group + .control-group
+	{
+		display: inline-block;
+		vertical-align: top;
+		width: 45%;
+	}
+	
+	#map_canvas
+	{
+		display: block;
+		width: 98%;
+		height: 450px;
+	}
+	
+	.description
+	{
+		margin-top: 10px;
+	}
+}
+
+
+
+/*************************************************************************************************************************************************
+* Résolutions inférieures ou égales à 430px de largeur
+**************************************************************************************************************************************************/
+@media screen and (max-width: 430px)
+{
+	body
+	{
+		height: 1080px;
+	}
+	
+	#corps
+	{
+		height: 1050px;
+	}
+	
+	#header
+	{
+		height: 50px;
+	}
+	
+	#ensemble
+	{
+		height: 920px;
+		margin: auto;
+		margin-top: 10px;
+	}
+	
+	.sous_form .control-group:first-child, .sous_form .control-group + .control-group
+	{
+		display:block;
+		width: 100%;
+	}
+	
+	#map_canvas 
+	{
+		width: 95%;
+		height: 70%;
+		height: 380px;
+	}
+}

@@ -75,7 +75,7 @@ else
 			//require_once('../../lien_connexion.php');
 			?>
 			
-			<h2><?php if (isset($_GET['investisseur']) && $_GET['investisseur'] == 'true') echo 'Spécial Investisseurs - ';?>Résultats de la recherche <img class="loader" src="../../images/loader.gif" alt="loader" /></h2>
+			<h2><?php if (isset($_GET['investisseur']) && $_GET['investisseur'] == 'true') echo 'Spécial Investisseurs - ';?>Résultats de la recherche <img class="loader" src="images/loader.gif" alt="loader" /></h2>
 			
 			<div class="cadre">
 				<button class="btn btn-small disabled precedent">Précédent</button>
@@ -269,15 +269,15 @@ else
 	</script>
 	
 	<script type="text/javascript" src="js/maps.js"></script>	
-	<script type="text/javascript" src="../../js/protection_photos.js"></script>
+	<script type="text/javascript" src="js/protection_photos.js"></script>
 	<script type="text/javascript" src="js/parcourir_recherches.js"></script>	
-	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
+	<script type="text/javascript" src="js/menu_basse_resolution.js"></script>
 	<script type="text/javascript" src="js/map_size.js"></script>
-	<script type="text/javascript" src="../../js/ad-gallery_correctifIE8.js"></script>
-	<script type="text/javascript" src="../../js/loader_ajax.js"></script>
-	<script type="text/javascript" src="../../js/print-bien.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
-	<script type="text/javascript" src="../Compte/js/selection_client.js"></script>
+	<script type="text/javascript" src="js/ad-gallery_correctifIE8.js"></script>
+	<script type="text/javascript" src="js/loader_ajax.js"></script>
+	<script type="text/javascript" src="js/print-bien.js"></script>
+	<script type="text/javascript" src="js/connexion.js"></script>
+	<script type="text/javascript" src="js/selection_client.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="../../js/nav_correctifIE8.js"></script><![endif]-->
 </body>
 </html>
