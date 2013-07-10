@@ -19,6 +19,7 @@
 	behavior: url('http://localhost:8080/temara/library/PIE/PIE.htc');
 	width: 96%;
 	position: relative;
+	min-width: 400px;
 }
 
 .rouge

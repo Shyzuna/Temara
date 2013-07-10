@@ -80,7 +80,7 @@
 	<!-- jQuery UI -->
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<!-- Bootstrap -->
-	<script type="text/javascript" src="../../library/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- API Google Maps -->
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	
