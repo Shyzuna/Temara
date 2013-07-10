@@ -14,7 +14,7 @@ class ConnexionBDD
 	{
 		if (is_null(self::$connexion))
 		{
-			$connexion = new PDO('mysql:host=localhost;dbname=temara','root','toshiba');
+			$connexion = new PDO('mysql:host=localhost;dbname=temara','root','');
 			$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$connexion->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 			$connexion->exec("SET CHARACTER SET utf8");
