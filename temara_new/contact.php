@@ -82,10 +82,46 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		&& ($surfaceMin == null || is_numeric($surfaceMin)) && ($surfaceMax == null || is_numeric($surfaceMax)) && ($surfaceMin == null || $surfaceMax == null || $surfaceMin <= $surfaceMax)
 		&& ($nbPiecesMin == null || is_numeric($nbPiecesMin)) && ($nbPiecesMax == null || is_numeric($nbPiecesMax)) && ($nbPiecesMin == null || $nbPiecesMax == null || $nbPiecesMin <= $nbPiecesMax))
 	{
-		$message ;
+		switch($civilite)
+		{
+			case 1:
+				$civilite="Monsieur";
+				break;
+			case 2:
+				$civilite="Madame";
+				break;
+			case 3:
+				$civilite="Mademoiselle";
+				break;
+		}
+		
+		switch($etat)
+		{
+			case 1:	
+				$etat="à vendre";
+				break;
+			case 2:
+				$etat="à louer";
+				break;
+		}
+		
+		if(!empty($remarques))
+		{
+			$remarques="Il souhaite faire remarquer :\"".$remarques."\".";
+		}
+		else
+		{
+			$remarques="";
+		}
+			
+		$message="".$civilite." ".$prenom." ".$nom." recherche un bien de type ".$typeBien." ".$etat." entre ".$budgetMin." et ".$budgetMax." euros
+					d'une surface comprise entre ".$surfaceMin."m² et ".$surfaceMax."m² avec ".$nbPiecesMin." à ".$nbPiecesMax." pièces.
+					".nl2br($remarques)."
+					Ces coordonnées : N°Tél : ".$telephone." et son Courriel ".$mail."";
+					
 		$desti = "isabelle.tempez@temara.fr";
 		$sujet = "Contact ".$civilite.$nom;
-		mail($desti,$sujet,$message);
+		mail($desti,$sujet,nl2br($message));
 		//ContactTable::addContact($civilite,$nom,$prenom,$telephone,$mail,$typeBien,$etat,$budgetMin,$budgetMax,$surfaceMin,$surfaceMax,$nbPiecesMin,$nbPiecesMax,nl2br($remarques));
 		$formEnvoye = true;
 	}
@@ -150,7 +186,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		<div id="ensemble">
 				
 				
-				<button class="btn btn-success connexion"  onclick="location.href='index.php'">Acceuil</button>
+				<button class="btn btn-success connexion"  onclick="location.href='index.php'">Accueil</button>
 				
 				<h2>Nous contacter</h2>
 				
