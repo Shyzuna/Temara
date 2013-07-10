@@ -1,0 +1,16 @@
+h4
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: Verdana;
+	color: rgb(71, 122, 94);
+}
+
+
+@media screen and (max-width: 799px) 
+{
+	input[type="number"] 
+	{
+		width: 80%;
+	}
+}
