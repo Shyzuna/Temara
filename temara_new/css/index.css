@@ -184,18 +184,8 @@
 
 .cadre
 {
-	border : solid 3px rgba(0,0,0,0.2);
-	-webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-	
-	-moz-box-shadow: 5px 5px 10px 0px #656565;
-	-webkit-box-shadow: 5px 5px 10px 0px #656565;
-	box-shadow: 5px 5px 10px 0px #656565;
-	
 	/* IE <= 8 */
 	background-color: white; /* Sinon box-shadow ne fonctionne pas sous IE */
-	behavior: url("http://localhost:8080/temara/library/PIE/PIE.htc");
 	
 	padding : 10px;
 	position: relative;

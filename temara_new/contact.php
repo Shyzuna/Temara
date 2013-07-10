@@ -185,7 +185,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		
 		<div id="ensemble">
 				
-				
+			<div class="cadre">
 				<button class="btn btn-success connexion"  onclick="location.href='index.php'">Accueil</button>
 				
 				<h2>Nous contacter</h2>
