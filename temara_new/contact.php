@@ -107,21 +107,33 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		
 		if(!empty($remarques))
 		{
-			$remarques="Il souhaite faire remarquer :\"".$remarques."\".";
+			$remarques="Il souhaite faire remarquer :\n".$remarques;
 		}
 		else
 		{
 			$remarques="";
 		}
+		
+		if($budgetMin == 0 or $budgetMin==$budgetMax)
+			$budget = " à ".$budgetMax." euros,";
+		else
+			$budget = " entre ".$budgetMin." et ".$budgetMax." euros,";
 			
-		$message="".$civilite." ".$prenom." ".$nom." recherche un bien de type ".$typeBien." ".$etat." entre ".$budgetMin." et ".$budgetMax." euros
-					d'une surface comprise entre ".$surfaceMin."m² et ".$surfaceMax."m² avec ".$nbPiecesMin." à ".$nbPiecesMax." pièces.
-					".nl2br($remarques)."
-					Ces coordonnées : N°Tél : ".$telephone." et son Courriel ".$mail."";
+		if($surfaceMin == 0 or $surfaceMin==$surfaceMax)
+			$surface = "d'une surface de ".$surfaceMax." m²,";
+		else
+			$surface = "d'une surface comprise entre ".$surfaceMin."m² et ".$surfaceMax."m²,";
+
+		if($nbPiecesMin == 0 or $nbPiecesMin==$nbPiecesMax)
+			$piece = " avec ".$nbPiecesMax." pièce(s)";
+		else
+			$piece = " avec ".$nbPiecesMin." à ".$nbPiecesMax." pièce(s).";			
+		
+			$message=$civilite." ".$prenom." ".$nom." recherche un bien de type ".$typeBien." ".$etat.$budget."\n".$surface.$piece.".\n".$remarques."\nCes coordonnées : N°Tél : ".$telephone." et son Courriel ".$mail;
 			
 		$desti = "isabelle.tempez@temara.fr";
-		$sujet = "Contact ".$civilite.$nom;
-		mail($desti,$sujet,nl2br($message));
+		$sujet = "Contact ".$civilite." ".$nom;
+		mail($desti,$sujet,$message);
 		//ContactTable::addContact($civilite,$nom,$prenom,$telephone,$mail,$typeBien,$etat,$budgetMin,$budgetMax,$surfaceMin,$surfaceMax,$nbPiecesMin,$nbPiecesMax,nl2br($remarques));
 		$formEnvoye = true;
 	}
@@ -181,12 +193,11 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 
 	<div id="corps">
 		<?php include('header.php'); ?>
-
+		<?php include('nav.php'); ?>
 		
 		<div id="ensemble">
 				
 			<div class="cadre">
-				<button class="btn btn-success connexion"  onclick="location.href='index.php'">Accueil</button>
 				
 				<h2>Nous contacter</h2>
 				
