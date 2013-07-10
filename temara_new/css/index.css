@@ -148,6 +148,12 @@
 	margin-top: 5%;
 }
 
+.mention
+{
+	font-size:12px;
+	color: grey;
+}
+
 /* le défilement des photos des biens */
 
 .ad-gallery
