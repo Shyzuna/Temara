@@ -1,5 +1,6 @@
 <?php
-/*session_start();
+/*
+session_start();
 
 require_once('Estimation.class.php');
 require_once('EstimationTable.class.php');
@@ -86,8 +87,49 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		&& $_POST['nom'] != '' && $_POST['prenom'] != '' && $_POST['telephone'] != '' && (preg_match("^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}^",$telephone)) 
 		&& $_POST['mail'] != '' && filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL) && ($_POST['civilite'] >= 1 && $_POST['civilite'] <= 3))
 	{	
+		/*
 		$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
 						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));
+						*/
+		
+		switch($etat)
+		{
+			case 1:	
+				$etat="à vendre";
+				break;
+			case 2:
+				$etat="à louer";
+				break;
+		}
+		
+			switch($civilite)
+		{
+			case 1:
+				$civilite="Monsieur";
+				break;
+			case 2:
+				$civilite="Madame";
+				break;
+			case 3:
+				$civilite="Mademoiselle";
+				break;
+		}
+		
+		
+		$message="Fiche du bien
+".$typeBien." ".$etat." avec ".$nbPieces." de ".$surface."m² au".$adresse." ".$codePostal." ".$ville."
+Description : ".$description."
+
+Coordonnées :
+".$civilite." ".$prenom." ".$nom."
+Tel : ".$telephone."  Mail : ".$mail."
+";
+		
+		
+		
+		$desti = "isabelle.tempez@temara.fr";
+		$sujet = "Contact ".$civilite." ".$nom."(Vente d'un Bien)";
+		mail($desti,$sujet,$message);
 						
 		$formEnvoye = true;
 	}
@@ -140,12 +182,12 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
   <title>TEMARA</title>
   
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
   
-  <link rel="stylesheet" href="/css/index.css">
-  <link href="/css/media-queries.css" rel="stylesheet" type="text/css">
-  <link href="/css/form-media-queries.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="css/estimation.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="./css/media-queries.css" rel="stylesheet" type="text/css">
+  <link href="./css/form-media-queries.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./css/estimation.css">
   <!--[if lte IE 8]>
 	<link rel="stylesheet" href="../../css/indexIE8.css">
   <![endif]-->
@@ -156,15 +198,15 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 <body>
 
 	<div id="corps">
-		<?php include('/header.php'); ?>
+		<?php include('./header.php'); ?>
 		
-		<?php include('/nav.php'); ?>
+		<?php include('./nav.php'); ?>
 		
 		<div id="ensemble">
-			<?php include('/message_rouge.php'); ?>
+			<?php include('./message_rouge.php'); ?>
 			
 			<?php
-			require_once('/lien_connexion.php');
+			//require_once('./lien_connexion.php');
 			?>
 			
 			<h2>Estimation et mise en vente</h2>
@@ -349,13 +391,13 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 	<!-- jQuery UI -->
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<!-- Bootstrap -->
-	<script type="text/javascript" src="../../library/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
 	
 	<!--[if lt IE 9]>
 		<script src="../../library/respond.min.js"></script>
 		<script type="text/javascript" src="../../js/nav_correctifIE8.js"></script>
 	<![endif]-->
-	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
+	<script type="text/javascript" src="./js/menu_basse_resolution.js"></script>
+	<script type="text/javascript" src="./js/connexion.js"></script>
 </body>
 </html>
