@@ -113,7 +113,6 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		{
 			$remarques="";
 		}
-			
 		
 		if($budgetMin == 0 or $budgetMin==$budgetMax)
 			$budget = " à ".$budgetMax." euros,";
@@ -131,7 +130,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 			$piece = " avec ".$nbPiecesMin." à ".$nbPiecesMax." pièce(s).";			
 		
 			$message=$civilite." ".$prenom." ".$nom." recherche un bien de type ".$typeBien." ".$etat.$budget."\n".$surface.$piece.".\n".$remarques."\nCes coordonnées : N°Tél : ".$telephone." et son Courriel ".$mail;
-					
+			
 		$desti = "isabelle.tempez@temara.fr";
 		$sujet = "Contact ".$civilite." ".$nom;
 		mail($desti,$sujet,$message);
