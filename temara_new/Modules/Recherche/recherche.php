@@ -206,6 +206,6 @@ $tabVilles = BienTable::getVilles();
 		$(window).resize(function(){$('input[name="ville"]').autocomplete("close");});
 	</script>
 	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
+	<!--<script type="text/javascript" src="../../js/connexion.js"></script>-->
 </body>
 </html>
