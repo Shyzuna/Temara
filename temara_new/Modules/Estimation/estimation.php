@@ -84,8 +84,59 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		&& $_POST['nom'] != '' && $_POST['prenom'] != '' && $_POST['telephone'] != '' && (preg_match("^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}^",$telephone)) 
 		&& $_POST['mail'] != '' && filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL) && ($_POST['civilite'] >= 1 && $_POST['civilite'] <= 3))
 	{	
-		$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
+		/*$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
 						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));
+		*/				
+		
+		switch($etat)
+		{
+			case 1:	
+				$etat="à vendre";
+				break;
+			case 2:
+				$etat="à louer";
+				break;
+		}
+		
+			switch($civilite)
+		{
+			case 1:
+				$civilite="Monsieur";
+				break;
+			case 2:
+				$civilite="Madame";
+				break;
+			case 3:
+				$civilite="Mademoiselle";
+				break;
+		}
+		
+		if(!empty($commentaire))
+		{
+			$commentaire="Il souhaite faire remarquer :\n".$commentaire;
+		}
+		else
+		{
+			$commentaire="";
+		}
+		
+		
+		$message="Fiche du bien
+".$typeBien." ".$etat." avec ".$nbPieces." de ".$surface."m² au".$adresse." ".$codePostal." ".$ville."
+Description : ".$description."
+
+Coordonnées :
+".$civilite." ".$prenom." ".$nom."
+Tel : ".$telephone."  Mail : ".$mail."
+
+".$commentaire."";
+		
+		
+		
+		$desti = "isabelle.tempez@temara.fr";
+		$sujet = "Contact ".$civilite." ".$nom."(Vente d'un Bien)";
+		mail($desti,$sujet,$message);
+
 						
 		$formEnvoye = true;
 	}
