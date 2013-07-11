@@ -51,15 +51,15 @@ body
 
 #header
 {
-	background-image:url("fond_ban.png");
 	background-repeat:repeat-x;
 	margin-bottom : 5px;
 	padding-bottom: 5px;
+	text-align: center;
 }
 
-.logo_titre
-{
-
+img {
+        max-width: 100%;
+        height: auto;
 }
 
 /* le menu */
