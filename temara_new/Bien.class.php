@@ -146,7 +146,7 @@ class Bien
 			$path = '../../';
 		else
 			$path = './';
-		echo $path;
+			
 		$res = "";
 		if ($exists)
 			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
@@ -243,6 +243,13 @@ class Bien
 			$res .= Bien::detailHTML('Largeur façade',$this->surface,'m');
 		$res .= '</p>';
 		
+		$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
+		if ($littlepath != '/index.php' and  $littlepath != '/')
+			$path = '../../';
+		else
+			$path = './';
+
+		
 		$res .= '<p class="description_right agence">';
 		if ($this->codeAgence == '80TEMACO')
 			$res .= '<strong>TEMARA Corbie</strong><br />18 rue Marcelin Truquin<br />80800 Corbie<br />03.22.96.87.52';
@@ -252,21 +259,21 @@ class Bien
 		
 		$res .= '<div class="icones_description">';
 		
-		$res .= '<a href="http://localhost:8080/temara/Modules/DemandeInfos/demande_informations.php?id='.$this->id.'"><img src="http://localhost:8080/temara/images/point-interrogation.png" alt="question" title="Questions/Demande de visite" /></a>';
-		$res .= '<a media="print" class="btn-print" onclick="window.print()"><img src="http://localhost:8080/temara/images/imprimante.png" alt="Imprimer" title="Imprimer cette fiche" /></a>';
+		$res .= '<a href="'.$path.'Modules/DemandeInfos/demande_informations.php?id='.$this->id.'"><img src="'.$path.'/images/point-interrogation.png" alt="question" title="Questions/Demande de visite" /></a>';
+		$res .= '<a media="print" class="btn-print" onclick="window.print()"><img src="'.$path.'/images/imprimante.png" alt="Imprimer" title="Imprimer cette fiche" /></a>';
 		
-		$res .= '<form action="http://localhost:8080/temara/Modules/Recherche/maps.php" method="post" class="form_icon_map">';
+		$res .= '<form action="'.$path.'/Modules/Recherche/maps.php" method="post" class="form_icon_map">';
 		$res .= '<input type="hidden" name="reference" value="'.$this->reference.'" />';
-		$res .= '<input type="image" src="http://localhost:8080/temara/images/marker.png" title="Voir la situation géographique" alt="Voir la situation géographique" />';
+		$res .= '<input type="image" src="'.$path.'/images/marker.png" title="Voir la situation géographique" alt="Voir la situation géographique" />';
 		$res .= '</form>';
 		
-		if (isset($_SESSION['compte']))
+		/*if (isset($_SESSION['compte']))
 			$compte = unserialize($_SESSION['compte']);
 		
 		if (isset($_SESSION['compte']) && in_array($this->id,$compte->tabIdSelections))
 			$res .= '<img class="etoile etoile-jaune" title="Supprimer ce bien de votre sélection" src="http://localhost:8080/temara/images/etoile-jaune.png" alt="Supprimer ce bien de votre sélection" />';
 		else
-			$res .= '<img class="etoile etoile-blanche" title="Ajouter ce bien à votre sélection" src="http://localhost:8080/temara/images/etoile-blanche.png" alt="Cliquer pour ajouter ce bien à votre sélection" />';
+			$res .= '<img class="etoile etoile-blanche" title="Ajouter ce bien à votre sélection" src="http://localhost:8080/temara/images/etoile-blanche.png" alt="Cliquer pour ajouter ce bien à votre sélection" />';*/
 		
 		$res .= '</div>';
 		
