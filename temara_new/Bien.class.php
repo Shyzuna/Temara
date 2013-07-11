@@ -111,8 +111,8 @@ class Bien
 				
 				if ($exists)
 				{
-					$res .= '<li><a href="http://localhost:8080/temara/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg">';
-					$res .= '<img class="photo_bien" src="http://localhost:8080/temara/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
+					$res .= '<li><a href="http://127.0.0.1/temara/temara_new/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg">';
+					$res .= '<img class="photo_bien" src="http://127.0.0.1/temara/temara_new/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
 					$res .= '</a></li>';
 				}
 			}

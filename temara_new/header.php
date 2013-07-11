@@ -13,7 +13,6 @@
 <script type="text/javascript">
 	var CheminComplet=  document.location.href;
 	var CheminRepertoire= CheminComplet.substring(CheminComplet.lastIndexOf( "/" )+1 );
-	alert(CheminRepertoire);
 	var path = './';
 	if (CheminRepertoire != 'index.php' && CheminRepertoire != '')
 		path = '../../';

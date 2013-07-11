@@ -94,12 +94,12 @@ img {
 
 #nav li:nth-child(2)
 {
-    width: 10%
+    width: 15%
 }
 
 #nav li:nth-child(3)
 {
-    width: 18%;
+    width: 20%;
 }
 
 #nav li:nth-child(4)
@@ -109,17 +109,12 @@ img {
 
 #nav li:nth-child(5)
 {
-    width: 18%;
+    width: 20%;
 }
 
 #nav li:nth-child(6)
 {
-    width: 9%
-}
-
-#nav li:nth-child(7)
-{
-    width: 13%;
+    width: 15%
 }
 
 #nav a
