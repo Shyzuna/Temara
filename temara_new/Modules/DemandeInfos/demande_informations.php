@@ -91,6 +91,15 @@ if (isset($_GET['id']))
 			{
 				$demandeVisite = (isset($_POST['demandeVisite'])) ? 1 : 0;
 				
+				if($demandeVisite==1)
+				{
+					$visite="Le client souhaite visiter";
+				}
+				else
+				{
+					$visite="";
+				}
+				
 				if(!empty($commentaire))
 				{
 					$commentaire="Il souhaite préciser :\n".$commentaire;
@@ -100,7 +109,7 @@ if (isset($_GET['id']))
 					$commentaire="";
 				}
 				
-				$message="Renseignements sur ".$bien."\n\nDe".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$commentaire."";
+				$message="Renseignements sur ".$bien."\n\nDe".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$visite."\n\n".$commentaire."";
 				
 				$desti = "isabelle.tempez@temara.fr";
 				$sujet = "Question de ".$civilite." ".$nom."";
