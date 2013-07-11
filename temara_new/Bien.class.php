@@ -109,10 +109,16 @@ class Bien
 				$emplacementPossible2 = '../../images/biens/'.$photo->nomImage.'.jpg';
 				$exists = file_exists($emplacementPossible1) || file_exists($emplacementPossible2);
 				
+				$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
+				if ($littlepath != '/index.php' and  $littlepath != '/')
+					$path = '../../';
+				else
+					$path = './';
+				
 				if ($exists)
 				{
-					$res .= '<li><a href="http://127.0.0.1/temara/temara_new/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg">';
-					$res .= '<img class="photo_bien" src="http://127.0.0.1/temara/temara_new/filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
+					$res .= '<li><a href="'.$path.'filigrane.php?image='.$path.'images/biens/'.$photo->nomImage.'.jpg">';
+					$res .= '<img class="photo_bien" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
 					$res .= '</a></li>';
 				}
 			}
@@ -135,11 +141,17 @@ class Bien
 		else
 			$exists = false;
 		
+		$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
+		if ($littlepath != '/index.php' and  $littlepath != '/')
+			$path = '../../';
+		else
+			$path = './';
+		
 		$res = "";
 		if ($exists)
-			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="http://localhost:8080/temara/filigrane.php?image=images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
+			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
 		else
-			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="http://localhost:8080/temara/images/image-defaut.jpg" alt="photo bien" />';
+			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/image-defaut.jpg" alt="photo bien" />';
 		return $res;
 	}
 	
