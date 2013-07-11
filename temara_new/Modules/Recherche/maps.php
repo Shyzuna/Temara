@@ -72,7 +72,7 @@ else
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			//require_once('../../lien_connexion.php');
 			?>
 			
 			<h2><?php if (isset($_GET['investisseur']) && $_GET['investisseur'] == 'true') echo 'Spécial Investisseurs - ';?>Résultats de la recherche <img class="loader" src="../../images/loader.gif" alt="loader" /></h2>

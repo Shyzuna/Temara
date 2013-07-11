@@ -146,7 +146,7 @@ class Bien
 			$path = '../../';
 		else
 			$path = './';
-		
+		echo $path;
 		$res = "";
 		if ($exists)
 			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
