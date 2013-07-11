@@ -90,7 +90,7 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		/*
 		$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
 						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));
-						*/
+		*/				
 		
 		switch($etat)
 		{
