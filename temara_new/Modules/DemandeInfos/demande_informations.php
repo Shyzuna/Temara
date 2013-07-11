@@ -109,7 +109,7 @@ if (isset($_GET['id']))
 					$commentaire="";
 				}
 				
-				$message="Renseignements sur ".$bien."\n\nDe".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$visite."\n\n".$commentaire."";
+				$message="Renseignements sur ".$bien->id."\n\nDe".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$visite."\n\n".$commentaire."";
 				
 				$desti = "isabelle.tempez@temara.fr";
 				$sujet = "Question de ".$civilite." ".$nom."";
