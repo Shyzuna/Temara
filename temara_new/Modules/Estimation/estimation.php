@@ -378,7 +378,7 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		</div>
 		
 	<?php
-		include("foot.php");
+		include("../../foot.php");
 	?>	
 	</div>
 	

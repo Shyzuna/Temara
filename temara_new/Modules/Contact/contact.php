@@ -421,7 +421,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		</div>
 	
 	<?php
-		include("foot.php");
+		include("../../foot.php");
 	?>
 	
 	</div>

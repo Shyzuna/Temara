@@ -94,7 +94,7 @@ session_start();
 		</div>
 		
 	<?php
-		include("foot.php");
+		include("../../foot.php");
 	?>	
 	</div>
 	

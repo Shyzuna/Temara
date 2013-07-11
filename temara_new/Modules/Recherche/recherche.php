@@ -169,7 +169,7 @@ $tabVilles = BienTable::getVilles();
 		</div>
 		
 	<?php
-		include("foot.php");
+		include("../../foot.php");
 	?>
 		
 	</div>
