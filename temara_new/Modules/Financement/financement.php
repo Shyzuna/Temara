@@ -92,10 +92,14 @@ session_start();
 				</form>
 			</div>
 		</div>
+		
+	<?php
+		include("foot.php");
+	?>	
 	</div>
 	
 	<?php
-	require_once('../../modal_connexion.php');
+	// require_once('../../modal_connexion.php');
 	?>
 	
 	<!-- jQuery -->

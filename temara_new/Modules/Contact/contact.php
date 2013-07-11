@@ -419,10 +419,15 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 				</form>
 			</div>
 		</div>
+	
+	<?php
+		include("foot.php");
+	?>
+	
 	</div>
 	
 	<?php
-	require_once('../../modal_connexion.php');
+	// require_once('../../modal_connexion.php');
 	?>
 	
 	<!-- jQuery -->

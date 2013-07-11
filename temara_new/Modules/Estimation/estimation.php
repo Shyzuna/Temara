@@ -376,10 +376,14 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 				?>
 			</div>
 		</div>
+		
+	<?php
+		include("foot.php");
+	?>	
 	</div>
 	
 	<?php
-	require_once('../../modal_connexion.php');
+	// require_once('../../modal_connexion.php');
 	?>
 	
 	<!-- jQuery -->
