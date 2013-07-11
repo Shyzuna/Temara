@@ -115,6 +115,15 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 				break;
 		}
 		
+		if(!empty($commentaire))
+		{
+			$commentaire="Il souhaite faire remarquer :\n".$commentaire;
+		}
+		else
+		{
+			$commentaire="";
+		}
+		
 		
 		$message="Fiche du bien
 ".$typeBien." ".$etat." avec ".$nbPieces." de ".$surface."m² au".$adresse." ".$codePostal." ".$ville."
@@ -123,7 +132,8 @@ Description : ".$description."
 Coordonnées :
 ".$civilite." ".$prenom." ".$nom."
 Tel : ".$telephone."  Mail : ".$mail."
-";
+
+".$commentaire."";
 		
 		
 		
