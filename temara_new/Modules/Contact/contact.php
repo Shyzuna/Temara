@@ -136,7 +136,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		}
 		
 		
-		$message="Coordonnées :\n".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\nRecherche un bien de type ".$typeBien." ".$etat."\n".$budget." ".$surface." "$nbPiece"\n\n".$remarques."";
+		$message="Coordonnées :\n".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\nRecherche un bien de type ".$typeBien." ".$etat."\n".$budget." ".$surface." ".$nbPieces."\n\n".$remarques."";
 
 		$desti = "isabelle.tempez@temara.fr";
 		$sujet = "Contact ".$civilite." ".$nom."";
