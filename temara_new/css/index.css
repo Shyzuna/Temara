@@ -1,4 +1,4 @@
-﻿body
+body
 {
 	margin : auto;
 	max-width: 1000px;
@@ -19,7 +19,6 @@
 	behavior: url('http://localhost:8080/temara/library/PIE/PIE.htc');
 	width: 96%;
 	position: relative;
-	
 }
 
 .rouge
@@ -52,9 +51,15 @@
 
 #header
 {
-	background-image:url("../fond_ban.png");
+	background-image:url("fond_ban.png");
 	background-repeat:repeat-x;
-	text-align: center;
+	margin-bottom : 5px;
+	padding-bottom: 5px;
+}
+
+.logo_titre
+{
+
 }
 
 /* le menu */
@@ -102,12 +107,12 @@
     width: 25%;
 }
 
-#nav li:nth-child(6)
+#nav li:nth-child(5)
 {
     width: 18%;
 }
 
-#nav li:nth-child(5)
+#nav li:nth-child(6)
 {
     width: 9%
 }
@@ -148,12 +153,6 @@
 	margin-top: 5%;
 }
 
-.mention
-{
-	font-size:12px;
-	color: grey;
-}
-
 /* le défilement des photos des biens */
 
 .ad-gallery
@@ -190,8 +189,18 @@
 
 .cadre
 {
+	border : solid 3px rgba(0,0,0,0.2);
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	
+	-moz-box-shadow: 5px 5px 10px 0px #656565;
+	-webkit-box-shadow: 5px 5px 10px 0px #656565;
+	box-shadow: 5px 5px 10px 0px #656565;
+	
 	/* IE <= 8 */
 	background-color: white; /* Sinon box-shadow ne fonctionne pas sous IE */
+	behavior: url("http://localhost:8080/temara/library/PIE/PIE.htc");
 	
 	padding : 10px;
 	position: relative;
@@ -491,8 +500,4 @@
 #modal input
 {
 	width: 220px;
-}
-img {
-	max-width: 100%;
-	height : auto;
 }

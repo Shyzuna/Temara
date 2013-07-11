@@ -19,11 +19,11 @@ $biens = BienTable::obtientNouveautes();
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>TEMARA</title>
   <!-- jQuery UI -->
-  <link rel="stylesheet" href="jqueryUI/jquery-ui-1.10.2.custom.min.css" />
+  <link rel="stylesheet" href="library/jqueryUI/jquery-ui-1.10.2.custom.min.css" />
   <!-- AD Gallery -->
-  <link rel="stylesheet" href="css/jquery.ad-gallery.css" />
+  <link rel="stylesheet" href="library/ADGallery/jquery.ad-gallery.css" />
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="library/bootstrap/css/bootstrap.min.css" />
   
   <link rel="stylesheet" href="css/index.css">
   <link href="css/media-queries.css" rel="stylesheet" type="text/css">
@@ -47,7 +47,7 @@ $biens = BienTable::obtientNouveautes();
 			<?php include('message_rouge.php'); ?>
 			
 			<?php
-			// require_once('lien_connexion.php');
+			require_once('lien_connexion.php');
 			?>
 			
 			<h2>Nos nouveautés <img class="loader" src="images/loader.gif" alt="loader" /></h2>
@@ -121,7 +121,7 @@ $biens = BienTable::obtientNouveautes();
 	
 	
 	<?php
-	//require_once('modal_connexion.php');
+	require_once('modal_connexion.php');
 	?>
 	
 	<!-- jQuery -->
@@ -129,9 +129,9 @@ $biens = BienTable::obtientNouveautes();
 	<!-- jQuery UI -->
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<!-- AD Gallery -->
-	<script src="ADGallery/jquery.ad-gallery-modifie.js"></script>
+	<script src="library/ADGallery/jquery.ad-gallery-modifie.js"></script>
 	<!-- Bootstrap -->
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="library/bootstrap/js/bootstrap.min.js"></script>
 	
 	<script type="text/javascript" src="js/afficher_description.js"></script>
 	<script type="text/javascript" src="js/protection_photos.js"></script>
@@ -141,7 +141,7 @@ $biens = BienTable::obtientNouveautes();
 	<script type="text/javascript" src="js/loader_ajax.js"></script>
 	<script type="text/javascript" src="js/print-bien.js"></script>
 	<script type="text/javascript" src="js/connexion.js"></script>
-	<script type="text/javascript" src="js/selection_client.js"></script>
+	<script type="text/javascript" src="Modules/Compte/js/selection_client.js"></script>
 	
     <script type="text/javascript">
 		$(document).ready(function(){

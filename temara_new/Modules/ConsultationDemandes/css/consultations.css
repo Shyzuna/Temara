@@ -1,0 +1,55 @@
+.non_lu
+{
+	background-color: #f9f9f9;
+}
+
+.mouse_hand
+{
+	cursor: pointer;
+}
+
+.commentaire, .commentaire div
+{
+	display: none;
+}
+
+table
+{
+	font-family: Helvetica, sans-serif;
+}
+
+#menu_admin ul
+{
+	text-align: center;
+}
+
+#menu_admin li
+{
+	display: inline-block;
+	list-style-type: none;
+	margin-right: 3%;
+}
+
+#menu_admin a
+{
+	text-decoration: none;
+	color: black;
+	font-family: Verdana;
+	font-size: 0.8em;
+}
+
+#menu_admin .page_admin_actuelle
+{
+	font-weight: bold;
+}
+
+table .section_description
+{
+	display: inline-block;
+}
+
+table .commentaire_client
+{
+	display: inline-block;
+	vertical-align: top;
+}

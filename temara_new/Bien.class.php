@@ -6,8 +6,8 @@ require_once(realpath(__DIR__.'/ConnexionBDD.class.php'));
 require_once(realpath(__DIR__.'/redimension_image.php'));
 require_once(realpath(__DIR__.'/Photo.class.php'));
 require_once(realpath(__DIR__.'/PhotoTable.class.php'));
-require_once(realpath(__DIR__.'/LieuTable.class.php'));
-//require_once(realpath(__DIR__.'/Modules/Compte/Compte.class.php'));
+require_once(realpath(__DIR__.'/Modules/Recherche/LieuTable.class.php'));
+require_once(realpath(__DIR__.'/Modules/Compte/Compte.class.php'));
 
 class Bien
 {

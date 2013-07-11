@@ -1,0 +1,65 @@
+#corps h4
+{
+	font-size: 1.3em;
+	font-weight: bold;
+	font-family: Verdana;
+	color: rgb(71, 122, 94);
+}
+
+#corps .div_connexion
+{
+	display: inline-block;
+	width: 45%;
+}
+
+#corps .div_creation_compte
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+}
+
+#corps .div_creation_compte button
+{
+	margin-left: 45%;
+}
+
+#corps .form-horizontal .control-label 
+{
+	float: none;
+	text-align: left;
+	width: 100%;
+}
+	
+#corps .form-horizontal .controls 
+{
+	margin-left: 0;
+}
+
+#corps .control-group:first-child+.control-group a
+{
+	font-size: 0.7em;
+	color: blue;
+}
+
+
+/************************************************************************************************************************************************************
+* Ecrans inférieurs ou égals à 799px de largeur
+************************************************************************************************************************************************************/
+@media screen and (max-width: 799px) 
+{
+	#corps .div_connexion, #corps .div_creation_compte
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	#corps .div_creation_compte button
+	{
+		margin-left: 0;
+		width: 100%;
+		border-radius: 20px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+	}
+}
