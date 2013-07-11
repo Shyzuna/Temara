@@ -205,7 +205,7 @@ else
 		</div>
 		
 	<?php
-		include("foot.php");
+		include("../../foot.php");
 	?>	
 	
 	</div>
