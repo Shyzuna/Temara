@@ -110,7 +110,7 @@ class Bien
 				$exists = file_exists($emplacementPossible1) || file_exists($emplacementPossible2);
 				
 				$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
-				if ($littlepath != '/index.php' and  $littlepath != '/')
+				if (!strstr($littlepath,'/index.php') and  $littlepath != '/')
 					$path = '../../';
 				else
 					$path = './';
@@ -142,7 +142,7 @@ class Bien
 			$exists = false;
 		
 		$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
-		if ($littlepath != '/index.php' and  $littlepath != '/')
+		if (!strstr($littlepath,'/index.php') and  $littlepath != '/')
 			$path = '../../';
 		else
 			$path = './';

@@ -1,6 +1,6 @@
 <?php
 	$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
-	if ($littlepath != '/index.php' and  $littlepath != '/')
+	if (!strstr($littlepath,'/index.php') and  $littlepath != '/')
 		$path = '../../';
 	else
 		$path = './';
@@ -14,7 +14,7 @@
 	var CheminComplet=  document.location.href;
 	var CheminRepertoire= CheminComplet.substring(CheminComplet.lastIndexOf( "/" )+1 );
 	var path = './';
-	if (CheminRepertoire != 'index.php' && CheminRepertoire != '')
+	if (CheminRepertoire.indexOf('index.php') == -1 && CheminRepertoire != '')
 		path = '../../';
 	
 	document.getElementById("header").style.backgroundImage = 'url('+path+'images/fond_ban.png)';

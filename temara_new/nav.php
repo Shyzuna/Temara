@@ -1,6 +1,6 @@
 <?php
 	$littlepath = strrchr($_SERVER['REQUEST_URI'],'/');
-	if ($littlepath != '/index.php' and  $littlepath != '/')
+	if (!strstr($littlepath,'/index.php') and  $littlepath != '/')
 		$path = '../../';
 	else
 		$path = './';
