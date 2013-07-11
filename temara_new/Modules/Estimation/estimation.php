@@ -125,7 +125,9 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		$desti = "isabelle.tempez@temara.fr";
 		$sujet = "Vendeur ".$civilite." ".$nom."(Vente/Location)";
 		mail($desti,$sujet,$message);
-
+		
+		$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
+						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));
 						
 		$formEnvoye = true;
 	}
