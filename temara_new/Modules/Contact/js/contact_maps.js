@@ -1,4 +1,4 @@
-function initMaps()
+﻿function initMaps()
 {
 	/*
 	* TEMARA AMIENS
@@ -6,7 +6,7 @@ function initMaps()
 
 	var mapAmiensOptions = {
 		zoom: 14,
-		center: new google.maps.LatLng(49.898562,2.284637),
+		center: new google.maps.LatLng(49.8889660,2.3113663),
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 	}
 	  

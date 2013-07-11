@@ -117,8 +117,8 @@ class Bien
 				
 				if ($exists)
 				{
-					$res .= '<li><a href="'.$path.'filigrane.php?image='.$path.'images/biens/'.$photo->nomImage.'.jpg">';
-					$res .= '<img class="photo_bien" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
+					$res .= '<li><a href="'.$path.'filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg">';
+					$res .= '<img class="photo_bien" src="'.$path.'filigrane.php?image=images/biens/'.$photo->nomImage.'.jpg" alt="'.$photo->description.'"/>';
 					$res .= '</a></li>';
 				}
 			}
@@ -149,9 +149,9 @@ class Bien
 			
 		$res = "";
 		if ($exists)
-			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
+			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image=images/biens/'.$this->tabPhotos[0]->nomImage.'.jpg" alt="photo bien" />';
 		else
-			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image='.$path.'images/image-defaut.jpg" alt="photo bien" />';
+			$res .= '<img class="photo_bien" id="photo-'.$this->id.'" src="'.$path.'filigrane.php?image=images/image-defaut.jpg" alt="photo bien" />';
 		return $res;
 	}
 	

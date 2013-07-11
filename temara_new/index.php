@@ -117,6 +117,10 @@ $biens = BienTable::obtientNouveautes();
 				?>
 			</div>
 		</div>
+		
+		<?php
+			include("foot.php");
+		?>
 	</div>
 	
 	
@@ -176,6 +180,8 @@ $biens = BienTable::obtientNouveautes();
 	<?php
 	if (isset($_GET['id']) && is_numeric($_GET['id']))
 		echo '<script type="text/javascript">afficheDescription('.$_GET['id'].');</script>';
+		
+	
 	?>
 </body>
 </html>
