@@ -213,7 +213,7 @@ Tel : ".$telephone."  Mail : ".$mail."
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			//require_once('../../lien_connexion.php');
 			?>
 			
 			<h2>Estimation et mise en vente</h2>
