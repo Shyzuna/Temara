@@ -1,6 +1,4 @@
 
-<hr/>
-
 <center class="mention">
 	Transactions sur immeubles & fonds de commerce - Carte professionnelle n°117 délivrée par la Préfecture de la Somme <br /> 
 	Dans un souci de protection de notre clientèle, il n'est reçu aucun fonds, en dehors des honoraires <br />

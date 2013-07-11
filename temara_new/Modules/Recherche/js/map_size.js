@@ -36,8 +36,8 @@ function resizeMap ()
 		var corpsHeight = ensembleHeight + $('#header').outerHeight(true) + $('#nav').outerHeight(true) + 25;
 		var bodyHeight = corpsHeight + 100;
 		
-		$('body').height(bodyHeight);
-		$('#corps').height(corpsHeight);
+		$('body').height("auto");
+		$('#corps').height("auto");
 		$('#ensemble').height(ensembleHeight);
 	}
 	else if (windowWidth <= 799)

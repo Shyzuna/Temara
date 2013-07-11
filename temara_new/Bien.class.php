@@ -262,7 +262,7 @@ class Bien
 		$res .= '<a href="'.$path.'Modules/DemandeInfos/demande_informations.php?id='.$this->id.'"><img src="'.$path.'/images/point-interrogation.png" alt="question" title="Questions/Demande de visite" /></a>';
 		$res .= '<a media="print" class="btn-print" onclick="window.print()"><img src="'.$path.'/images/imprimante.png" alt="Imprimer" title="Imprimer cette fiche" /></a>';
 		
-		$res .= '<form action="'.$path.'/Modules/Recherche/maps.php" method="post" class="form_icon_map">';
+		$res .= '<form action="'.$path.'Modules/Recherche/maps.php" method="post" class="form_icon_map">';
 		$res .= '<input type="hidden" name="reference" value="'.$this->reference.'" />';
 		$res .= '<input type="image" src="'.$path.'/images/marker.png" title="Voir la situation géographique" alt="Voir la situation géographique" />';
 		$res .= '</form>';

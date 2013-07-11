@@ -134,6 +134,7 @@ img {
 .mention
 {
 	color: grey;
+	margin-top: 10px;
 }
 
 /* L'ensemble constitué du "coeur" de la page (tout sauf le header, le nav et le footer) */
