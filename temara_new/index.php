@@ -125,7 +125,7 @@ $biens = BienTable::obtientNouveautes();
 	
 	
 	<?php
-	require_once('modal_connexion.php');
+	//require_once('modal_connexion.php');
 	?>
 	
 	<!-- jQuery -->
@@ -144,8 +144,8 @@ $biens = BienTable::obtientNouveautes();
 	<script type="text/javascript" src="js/ad-gallery_correctifIE8.js"></script>
 	<script type="text/javascript" src="js/loader_ajax.js"></script>
 	<script type="text/javascript" src="js/print-bien.js"></script>
-	<script type="text/javascript" src="js/connexion.js"></script>
-	<script type="text/javascript" src="Modules/Compte/js/selection_client.js"></script>
+	<!--<script type="text/javascript" src="js/connexion.js"></script>-->
+	<!--<script type="text/javascript" src="Modules/Compte/js/selection_client.js"></script>-->
 	
     <script type="text/javascript">
 		$(document).ready(function(){
