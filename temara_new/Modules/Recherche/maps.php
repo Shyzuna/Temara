@@ -283,6 +283,7 @@ else
 	<script type="text/javascript" src="../../js/print-bien.js"></script>
 	<!--<script type="text/javascript" src="../../js/connexion.js"></script>
 	<script type="text/javascript" src="../Compte/js/selection_client.js"></script>-->
+
 	<!--[if lt IE 9]><script type="text/javascript" src="../../js/nav_correctifIE8.js"></script><![endif]-->
 </body>
 </html>

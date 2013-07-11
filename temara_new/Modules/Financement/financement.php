@@ -121,7 +121,7 @@ session_start();
 	
 	<script type="text/javascript" src="js/calcul_financement.js"></script>
 	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
+	<!--<script type="text/javascript" src="../../js/connexion.js"></script>-->
 	<script type="text/javascript" src="../../library/jquery.placeholder.min.js"></script>
 	<script type="text/javascript">
 		$('form').submit(function(){return false;});

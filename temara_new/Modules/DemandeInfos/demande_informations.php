@@ -289,7 +289,7 @@ if (isset($_GET['id']))
 		<script type="text/javascript" src="../../js/nav_correctifIE8.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
+	<!--<script type="text/javascript" src="../../js/connexion.js"></script>-->
 </body>
 </html>
 

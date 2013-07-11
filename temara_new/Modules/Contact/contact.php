@@ -444,7 +444,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		<script type="text/javascript" src="../../js/nav_correctifIE8.js"></script>
 	<![endif]-->
 	<script type="text/javascript" src="../../js/menu_basse_resolution.js"></script>
-	<script type="text/javascript" src="../../js/connexion.js"></script>
+	<!--<script type="text/javascript" src="../../js/connexion.js"></script>-->
 	<script type="text/javascript" src="js/contact_maps.js"></script>
 </body>
 </html>
