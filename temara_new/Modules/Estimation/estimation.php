@@ -202,7 +202,7 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			//require_once('../../lien_connexion.php');
 			?>
 			
 			<h2>Estimation et mise en vente</h2>

@@ -214,7 +214,7 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			//require_once('../../lien_connexion.php');
 			?>
 			
 			<h2>Nous contacter</h2>

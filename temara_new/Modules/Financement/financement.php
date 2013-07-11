@@ -35,7 +35,7 @@ session_start();
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			//require_once('../../lien_connexion.php');
 			?>
 			
 			<h2>Calcul du financement</h2>

@@ -47,7 +47,7 @@ $biens = BienTable::obtientNouveautes();
 			<?php include('message_rouge.php'); ?>
 			
 			<?php
-			require_once('lien_connexion.php');
+			//require_once('lien_connexion.php');
 			?>
 			
 			<h2>Nos nouveautés <img class="loader" src="images/loader.gif" alt="loader" /></h2>
