@@ -84,9 +84,8 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		&& $_POST['nom'] != '' && $_POST['prenom'] != '' && $_POST['telephone'] != '' && (preg_match("^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}^",$telephone)) 
 		&& $_POST['mail'] != '' && filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL) && ($_POST['civilite'] >= 1 && $_POST['civilite'] <= 3))
 	{	
-		/*$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
-						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));
-		*/				
+		$demandeInfos = EstimationTable::addEstimation($_POST['typeBien'],$_POST['etat'],$nbPieces,$surface,$adresse,$codePostal,$ville,nl2br($description),
+						$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire));		
 		
 		switch($etat)
 		{
@@ -121,20 +120,10 @@ if (isset($_POST['typeBien']) && isset($_POST['etat']) && isset($_POST['nbPieces
 		}
 		
 		
-		$message="Fiche du bien
-".$typeBien." ".$etat." avec ".$nbPieces." de ".$surface."m² au".$adresse." ".$codePostal." ".$ville."
-Description : ".$description."
-
-Coordonnées :
-".$civilite." ".$prenom." ".$nom."
-Tel : ".$telephone."  Mail : ".$mail."
-
-".$commentaire."";
-		
-		
+		$message="Fiche du bien\n".$typeBien." ".$etat." avec ".$nbPieces." de ".$surface."m² au".$adresse." ".$codePostal." ".$ville."\nDescription : ".$description."\n\nCoordonnées :\n".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$commentaire."";
 		
 		$desti = "isabelle.tempez@temara.fr";
-		$sujet = "Contact ".$civilite." ".$nom."(Vente d'un Bien)";
+		$sujet = "Vendeur ".$civilite." ".$nom."(Vente/Location)";
 		mail($desti,$sujet,$message);
 
 						

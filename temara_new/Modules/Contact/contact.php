@@ -75,6 +75,73 @@ if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom'])
 		&& ($surfaceMin == null || is_numeric($surfaceMin)) && ($surfaceMax == null || is_numeric($surfaceMax)) && ($surfaceMin == null || $surfaceMax == null || $surfaceMin <= $surfaceMax)
 		&& ($nbPiecesMin == null || is_numeric($nbPiecesMin)) && ($nbPiecesMax == null || is_numeric($nbPiecesMax)) && ($nbPiecesMin == null || $nbPiecesMax == null || $nbPiecesMin <= $nbPiecesMax))
 	{
+		
+		switch($etat)
+		{
+			case 1:	
+				$etat="à vendre";
+				break;
+			case 2:
+				$etat="à louer";
+				break;
+		}
+		
+			switch($civilite)
+		{
+			case 1:
+				$civilite="Monsieur";
+				break;
+			case 2:
+				$civilite="Madame";
+				break;
+			case 3:
+				$civilite="Mademoiselle";
+				break;
+		}
+		
+		if(!empty($remarques))
+		{
+			$remarques="Il souhaite faire remarquer :\n".$remarques;
+		}
+		else
+		{
+			$remarques="";
+		}
+		
+		if(($budgetMin==$budgetMax)||($budgetMin==0))
+		{
+			$budget="à ".$budgetMax." €";
+		}
+		else
+		{
+			$budget="entre ".$budgetMin." et ".$budgetMax." €";
+		}
+		
+		if(($surfaceMin==$surfaceMax)||($surfaceMin==0))
+		{
+			$surface="de ".$surfaceMax." m²";
+		}
+		else
+		{
+			$surface="entre ".$surfaceMin." et ".$surfaceMax." m²";
+		}
+		
+		if(($nbPiecesMin==$nbPiecesMax)||($nbPiecesMin==0))
+		{
+			$nbPieces="avec ".$nbPiecesMax." pièce(s)";
+		}
+		else
+		{
+			$nbPieces="entre ".$nbPiecesMin." et ".$nbPiecesMax." pièces";
+		}
+		
+		
+		$message="Coordonnées :\n".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\nRecherche un bien de type ".$typeBien." ".$etat."\n".$budget." ".$surface." "$nbPiece"\n\n".$remarques."";
+
+		$desti = "isabelle.tempez@temara.fr";
+		$sujet = "Contact ".$civilite." ".$nom."";
+		mail($desti,$sujet,$message);
+		
 		ContactTable::addContact($civilite,$nom,$prenom,$telephone,$mail,$typeBien,$etat,$budgetMin,$budgetMax,$surfaceMin,$surfaceMax,$nbPiecesMin,$nbPiecesMax,nl2br($remarques));
 		$formEnvoye = true;
 	}
