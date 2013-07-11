@@ -67,7 +67,7 @@ if (isset($_GET['id']))
 		
 		$formEnvoye = false;
 		
-		/*
+		/* 
 		* Vérification et enregistrement des données du formulaire
 		*/
 		if (isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['telephone']) && isset($_POST['mail']) && isset($_POST['commentaire']))
@@ -90,6 +90,22 @@ if (isset($_GET['id']))
 			&& ($_POST['civilite'] >= 1 && $_POST['civilite'] <= 3) && $_POST['mail'] != '' && filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL))
 			{
 				$demandeVisite = (isset($_POST['demandeVisite'])) ? 1 : 0;
+				
+				if(!empty($commentaire))
+				{
+					$commentaire="Il souhaite préciser :\n".$commentaire;
+				}
+				else
+				{
+					$commentaire="";
+				}
+				
+				$message="Renseignements sur ".$bien."\n\nDe".$civilite." ".$prenom." ".$nom."\nTel : ".$telephone."  Mail : ".$mail."\n\n".$commentaire."";
+				
+				$desti = "isabelle.tempez@temara.fr";
+				$sujet = "Question de ".$civilite." ".$nom."";
+				mail($desti,$sujet,$message);
+				
 				$demandeInfos = DemandeInfosTable::addDemandeInfos($bien->id,$_POST['civilite'],$nom,$prenom,$telephone,$mail,nl2br($commentaire),$demandeVisite);
 				$formEnvoye = true;
 			}
@@ -146,7 +162,7 @@ if (isset($_GET['id']))
 			<?php include('../../message_rouge.php'); ?>
 			
 			<?php
-			require_once('../../lien_connexion.php');
+			// require_once('../../lien_connexion.php');
 			?>
 			
 			<h2>Demande d'informations : "<?php echo $bien->titre;?>"</h2>
